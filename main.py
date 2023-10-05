@@ -3,10 +3,11 @@ import numpy as np
 import os
 
 # Load the pre-trained Haar Cascade classifier for face detection
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('C:/Users/hp/OneDrive/Desktop/facial recognition/facial_recognition/haarcascade_frontalface_default.xml')
 
 # Specify the directory containing reference images
-reference_images_dir = 'reference_images'
+reference_images_dir = 'C:/Users/hp/OneDrive/Desktop/facial recognition/facial_recognition/reference_images'
+
 
 # Get a list of reference image filenames
 reference_image_files = os.listdir(reference_images_dir)
