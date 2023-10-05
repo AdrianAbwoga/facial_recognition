@@ -1,4 +1,4 @@
-# Facial Recognition App
+# Facial Recognition 
 
 This is a facial recognition application implemented in Python using the OpenCV library. The application can detect faces in real-time camera feeds and compare them with reference images to determine if a match is found.
 
