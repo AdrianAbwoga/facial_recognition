@@ -2,12 +2,19 @@ import cv2
 import numpy as np
 import os
 
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Define the relative paths from the script's directory
+cascade_relative_path = 'haarcascade_frontalface_default.xml'
+reference_images_relative_path = 'reference_images'
+
+# Construct the absolute paths
+cascade_path = os.path.join(script_dir, cascade_relative_path)
+reference_images_dir = os.path.join(script_dir, reference_images_relative_path)
+
 # Load the pre-trained Haar Cascade classifier for face detection
-face_cascade = cv2.CascadeClassifier('C:/Users/hp/OneDrive/Desktop/facial recognition/facial_recognition/haarcascade_frontalface_default.xml')
-
-# Specify the directory containing reference images
-reference_images_dir = 'C:/Users/hp/OneDrive/Desktop/facial recognition/facial_recognition/reference_images'
-
+face_cascade = cv2.CascadeClassifier(cascade_path)
 
 # Get a list of reference image filenames
 reference_image_files = os.listdir(reference_images_dir)
